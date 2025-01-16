@@ -42,38 +42,57 @@ Ce projet contient des solutions dans les langages suivants :
    git clone <URL_DU_DEPOT>
    cd <NOM_DU_DEPOT>
 
-Assurez-vous que le fichier contenant les données d'étalonnage (par exemple, document.txt) est correctement placé dans le chemin spécifié dans les fichiers de code.
+2. Assurez-vous que le fichier contenant les données d'étalonnage (par exemple, document.txt) est correctement placé dans le chemin spécifié dans les fichiers de code.
 Vous pouvez modifier le chemin directement dans les scripts si nécessaire.
+
+---
+
 🛠️ Vérification du chemin du fichier
 Modifiez la variable contenant le chemin du fichier dans le code, si nécessaire.
+
+---
+
 Exemple pour question1.py :
 python
-Copier
-Modifier
+
 chemin_fichier = "C:/Users/arijh/Desktop/Test_Arij_Hamraoui/document.txt"
 Assurez-vous que le fichier existe dans ce chemin avant d'exécuter le script.
+
+---
+
 ⚙️ Commandes pour exécuter chaque fichier
+
+---
+
 JavaScript (Node.js) 🟦
 Installez Node.js sur votre machine (si ce n'est pas déjà fait).
+
 Ouvrez un terminal dans le dossier contenant question1.js.
+
 Exécutez la commande suivante :
-bash
-Copier
-Modifier
+
 node question1.js
+
+---
+
 PHP 🟪
 Installez PHP sur votre machine (si ce n'est pas déjà fait).
+
 Ouvrez un terminal dans le dossier contenant question1.php.
+
 Exécutez la commande suivante :
-bash
-Copier
-Modifier
+
 php question1.php
+
+---
+
 Python 🟨
 Installez Python sur votre machine (si ce n'est pas déjà fait).
+
 Ouvrez un terminal dans le dossier contenant question1.py.
+
 Exécutez la commande suivante :
-bash
-Copier
-Modifier
+
 python question1.py
+
+---
