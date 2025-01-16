@@ -1,98 +1,144 @@
-# 📊 Calcul de la somme d'étalonnage
+# Défi du Calibrage des Lutins 🎄
+
+## 🎯 Objectif
+
+Résoudre l'énigme du calibrage en analysant un document contenant des valeurs d'étalonnage spécifiques.
 
 ## 📝 Description du problème
 
-Le document d'étalonnage nouvellement amélioré se compose de lignes de texte. Chaque ligne contient une **valeur d'étalonnage spécifique** que les lutins doivent récupérer.  
+Le document d'étalonnage nouvellement amélioré se compose de lignes de texte. Chaque ligne contient une **valeur d'étalonnage spécifique** que les lutins doivent récupérer.
+
 Sur chaque ligne, la valeur d'étalonnage peut être trouvée en **combinant le premier chiffre et le dernier chiffre** (dans cet ordre) pour former un nombre à deux chiffres.
 
 ### 🔍 Exemple
 
 Pour les lignes suivantes :
-
+```
 1abc2
 pqr3stu8vwx
 a1b2c3d4e5f
 treb7uchet
+```
 
+Les valeurs d'étalonnage sont :
+- `12` (ligne 1 : premier chiffre = 1, dernier chiffre = 2)
+- `38` (ligne 2 : premier chiffre = 3, dernier chiffre = 8)
+- `15` (ligne 3 : premier chiffre = 1, dernier chiffre = 5)
+- `77` (ligne 4 : premier chiffre = 7, dernier chiffre = 7)
 
-Les valeurs d'étalonnage sont :  
-- `12` (ligne 1 : premier chiffre = 1, dernier chiffre = 2)  
-- `38` (ligne 2 : premier chiffre = 3, dernier chiffre = 8)  
-- `15` (ligne 3 : premier chiffre = 1, dernier chiffre = 5)  
-- `77` (ligne 4 : premier chiffre = 7, dernier chiffre = 7)  
+La **somme totale des valeurs d'étalonnage** est : `12 + 38 + 15 + 77 = 142`
 
-La **somme totale des valeurs d'étalonnage** est :  
-`12 + 38 + 15 + 77 = 142`.
+## 📦 Prérequis
 
----
+Avant d'exécuter les solutions, assurez-vous d'avoir installé :
 
-## 📂 Fichiers dans le projet
+<div align="center">
 
-Ce projet contient des solutions dans les langages suivants :
-- **`question1.js`** : Solution en JavaScript (Node.js). 🟦  
-- **`question1.php`** : Solution en PHP. 🟪  
-- **`question1.py`** : Solution en Python. 🟨  
+| Langage | Version minimale | Site officiel |
+|---------|-----------------|---------------|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="20" height="20"/> JavaScript | Node.js 14+ | [nodejs.org](https://nodejs.org/) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="20" height="20"/> PHP | PHP 7.4+ | [php.net](https://www.php.net/) |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20" height="20"/> Python | Python 3.8+ | [python.org](https://www.python.org/) |
 
----
+</div>
 
-## 🚀 Instructions générales
+## 📂 Structure du projet
 
-1. Téléchargez ou clonez ce dépôt.  
-   ```bash
-   git clone <URL_DU_DEPOT>
-   cd <NOM_DU_DEPOT>
+```
+.
+├── README.md
+├── question1.js    # Solution JavaScript
+├── question1.php   # Solution PHP
+├── question1.py    # Solution Python
+└── document.txt    # Fichier d'entrée
+```
 
-2. Assurez-vous que le fichier contenant les données d'étalonnage (par exemple, document.txt) est correctement placé dans le chemin spécifié dans les fichiers de code.
-Vous pouvez modifier le chemin directement dans les scripts si nécessaire.
+## 🚀 Installation et utilisation
 
----
+### 1. Cloner le dépôt
 
-🛠️ Vérification du chemin du fichier
-Modifiez la variable contenant le chemin du fichier dans le code, si nécessaire.
+```bash
+git clone <URL_DU_DEPOT>
+cd <NOM_DU_DEPOT>
+```
 
----
+### 2. Configuration du fichier d'entrée
 
-Exemple pour question1.py :
-python
+Assurez-vous que votre fichier `document.txt` est présent dans le répertoire du projet et contient les données d'étalonnage à analyser.
 
-chemin_fichier = "C:/Users/arijh/Desktop/Test_Arij_Hamraoui/document.txt"
-Assurez-vous que le fichier existe dans ce chemin avant d'exécuter le script.
+#### 🛠️ Configuration du chemin
 
----
+Si nécessaire, modifiez le chemin du fichier dans les scripts :
 
-⚙️ Commandes pour exécuter chaque fichier
+<details>
+<summary>JavaScript</summary>
 
----
+```javascript
+const filePath = './document.txt';
+```
+</details>
 
-JavaScript (Node.js) 🟦
-Installez Node.js sur votre machine (si ce n'est pas déjà fait).
+<details>
+<summary>PHP</summary>
 
-Ouvrez un terminal dans le dossier contenant question1.js.
+```php
+$filePath = './document.txt';
+```
+</details>
 
-Exécutez la commande suivante :
+<details>
+<summary>Python</summary>
 
+```python
+file_path = './document.txt'
+```
+</details>
+
+### 3. Exécution des solutions
+
+Choisissez votre langage préféré et exécutez la solution correspondante :
+
+<details>
+<summary><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="20" height="20"/> Solution JavaScript</summary>
+
+```bash
 node question1.js
+```
+</details>
 
----
+<details>
+<summary><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="20" height="20"/> Solution PHP</summary>
 
-PHP 🟪
-Installez PHP sur votre machine (si ce n'est pas déjà fait).
-
-Ouvrez un terminal dans le dossier contenant question1.php.
-
-Exécutez la commande suivante :
-
+```bash
 php question1.php
+```
+</details>
 
----
+<details>
+<summary><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20" height="20"/> Solution Python</summary>
 
-Python 🟨
-Installez Python sur votre machine (si ce n'est pas déjà fait).
-
-Ouvrez un terminal dans le dossier contenant question1.py.
-
-Exécutez la commande suivante :
-
+```bash
 python question1.py
+```
+</details>
 
----
+## 📝 Format du fichier d'entrée
+
+Le fichier `document.txt` doit contenir une série de lignes, où chaque ligne contient au moins un chiffre. Exemple :
+
+```
+1abc2
+pqr3stu8vwx
+a1b2c3d4e5f
+treb7uchet
+```
+
+## 📊 Format de sortie
+
+Chaque solution affichera :
+1. La somme totale des valeurs d'étalonnage
+
+Exemple de sortie :
+```
+Somme totale des valeurs d'étalonnage : 142
+```
