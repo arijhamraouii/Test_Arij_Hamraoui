@@ -8,8 +8,10 @@ function extraireSommeEtalonnage(cheminFichier) {
     const data = fs.readFileSync(cheminFichier, 'utf8');
     const lignes = data.split('\n'); // Diviser le contenu en lignes
 
+    console.log("Résultat de la concaténation par ligne :");
+
     // Parcourir chaque ligne
-    lignes.forEach((ligne) => {
+    lignes.forEach((ligne, index) => {
         ligne = ligne.trim(); // Supprimer les espaces inutiles
         let premierChiffre = '';
         let dernierChiffre = '';
@@ -30,15 +32,18 @@ function extraireSommeEtalonnage(cheminFichier) {
             }
         }
 
-        // Former le nombre et l'ajouter à la somme
+        // Former le nombre et afficher la concaténation
         if (premierChiffre || dernierChiffre) {
             const nombreForme = parseInt(premierChiffre + dernierChiffre, 10);
+            console.log(`Ligne ${index + 1}: ${premierChiffre}${dernierChiffre}`);
             sommeEtalonnage += nombreForme;
+        } else {
+            console.log(`Ligne ${index + 1}: Aucun chiffre trouvé`);
         }
     });
 
     // Afficher la somme totale
-    console.log(`La somme des valeurs d'étalonnage est : ${sommeEtalonnage}`);
+    console.log(`\nLa somme des valeurs d'étalonnage est : ${sommeEtalonnage}`);
 }
 
 // Définir le chemin du fichier

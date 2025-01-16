@@ -12,6 +12,8 @@ def extraire_somme_etalonnage(chemin_fichier):
 
     # Ouvrir le fichier en mode lecture
     with open(chemin_fichier, 'r') as fichier:
+        # Initialiser le compteur de ligne
+        index = 1
         # Parcourir chaque ligne du fichier
         for ligne in fichier:
             # Supprimer les espaces ou sauts de ligne inutiles
@@ -34,11 +36,18 @@ def extraire_somme_etalonnage(chemin_fichier):
             # Si au moins un chiffre est trouvé, former le nombre à partir des chiffres
             if premier_chiffre or dernier_chiffre:
                 nombre_forme = int(premier_chiffre + dernier_chiffre)
+                # Afficher la concaténation des chiffres trouvés pour chaque ligne
+                print(f"Ligne {index}: {premier_chiffre}{dernier_chiffre}")
                 # Ajouter le nombre formé à la somme totale
                 somme_etalonnage += nombre_forme
+            else:
+                print(f"Ligne {index}: Aucun chiffre trouvé")  # Afficher si aucun chiffre n'est trouvé
+
+            # Incrémenter le compteur de ligne
+            index += 1
 
     # Afficher la somme totale des valeurs d'étalonnage
-    print(f"La somme des valeurs d'étalonnage est : {somme_etalonnage}")
+    print(f"\nLa somme des valeurs d'étalonnage est : {somme_etalonnage}")
 
 # Définir le chemin du fichier contenant les données
 chemin_fichier = "C:/Users/arijh/Desktop/Test_Arij_Hamraoui/document.txt"

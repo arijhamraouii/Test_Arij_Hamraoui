@@ -9,6 +9,7 @@ function extraireSommeEtalonnage($cheminFichier) {
 
     // Lire le fichier ligne par ligne
     $fichier = fopen($cheminFichier, "r");
+    $index = 1; // Compteur de ligne
     while (($ligne = fgets($fichier)) !== false) {
         $ligne = trim($ligne); // Supprimer les espaces inutiles
         $premierChiffre = '';
@@ -33,13 +34,18 @@ function extraireSommeEtalonnage($cheminFichier) {
         // Former le nombre et l'ajouter à la somme
         if ($premierChiffre !== '' || $dernierChiffre !== '') {
             $nombreForme = (int) ($premierChiffre . $dernierChiffre);
+            echo "Ligne $index: $premierChiffre$dernierChiffre\n"; // Afficher la concaténation
             $sommeEtalonnage += $nombreForme;
+        } else {
+            echo "Ligne $index: Aucun chiffre trouvé\n"; // Afficher s'il n'y a pas de chiffre
         }
+
+        $index++; // Incrémenter le compteur de ligne
     }
     fclose($fichier);
 
     // Afficher la somme totale
-    echo "La somme des valeurs d'étalonnage est : $sommeEtalonnage\n";
+    echo "\nLa somme des valeurs d'étalonnage est : $sommeEtalonnage\n";
 }
 
 // Définir le chemin du fichier
