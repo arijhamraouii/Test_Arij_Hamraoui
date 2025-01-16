@@ -1,16 +1,14 @@
 # 📊 Calcul de la somme d'étalonnage
 
 ## 🎯 Objectif
-
 Développer un système qui analyse un document texte ligne par ligne pour extraire et additionner les valeurs d'étalonnage, où chaque valeur est formée par la combinaison du premier et du dernier chiffre trouvés sur chaque ligne.
-## 📝 Description du problème
 
+## 📝 Description du problème
 Le document d'étalonnage nouvellement amélioré se compose de lignes de texte. Chaque ligne contient une **valeur d'étalonnage spécifique** que les lutins doivent récupérer.
 
 Sur chaque ligne, la valeur d'étalonnage peut être trouvée en **combinant le premier chiffre et le dernier chiffre** (dans cet ordre) pour former un nombre à deux chiffres.
 
 ### 🔍 Exemple
-
 Pour les lignes suivantes :
 ```
 1abc2
@@ -42,7 +40,6 @@ Avant d'exécuter les solutions, assurez-vous d'avoir installé :
 </div>
 
 ## 📂 Structure du projet
-
 ```
 .
 ├── README.md
@@ -55,7 +52,6 @@ Avant d'exécuter les solutions, assurez-vous d'avoir installé :
 ## 🚀 Installation et utilisation
 
 ### 1. Cloner le dépôt
-
 ```bash
 git clone <URL_DU_DEPOT>
 cd <NOM_DU_DEPOT>
@@ -63,14 +59,11 @@ cd <NOM_DU_DEPOT>
 
 ### 2. Configuration du fichier d'entrée
 
-Assurez-vous que votre fichier `document.txt` est présent dans le répertoire du projet et contient les données d'étalonnage à analyser.
-
 #### 🛠️ Configuration du chemin
-
-Si nécessaire, modifiez le chemin du fichier dans les scripts :
+Si nécessaire, modifiez le chemin du fichier dans les scripts selon votre environnement :
 
 <details>
-<summary>JavaScript</summary>
+<summary><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="20" height="20"/> JavaScript</summary>
 
 ```javascript
 const filePath = './document.txt';
@@ -78,7 +71,7 @@ const filePath = './document.txt';
 </details>
 
 <details>
-<summary>PHP</summary>
+<summary><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="20" height="20"/> PHP</summary>
 
 ```php
 $filePath = './document.txt';
@@ -86,7 +79,7 @@ $filePath = './document.txt';
 </details>
 
 <details>
-<summary>Python</summary>
+<summary><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20" height="20"/> Python</summary>
 
 ```python
 file_path = './document.txt'
@@ -124,7 +117,6 @@ python question1.py
 ## 📝 Format du fichier d'entrée
 
 Le fichier `document.txt` doit contenir une série de lignes, où chaque ligne contient au moins un chiffre. Exemple :
-
 ```
 1abc2
 pqr3stu8vwx
