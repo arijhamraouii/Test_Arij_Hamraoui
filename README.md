@@ -1,9 +1,8 @@
-# Défi du Calibrage des Lutins 🎄
+# 📊 Calcul de la somme d'étalonnage
 
 ## 🎯 Objectif
 
-Résoudre l'énigme du calibrage en analysant un document contenant des valeurs d'étalonnage spécifiques.
-
+Développer un système qui analyse un document texte ligne par ligne pour extraire et additionner les valeurs d'étalonnage, où chaque valeur est formée par la combinaison du premier et du dernier chiffre trouvés sur chaque ligne.
 ## 📝 Description du problème
 
 Le document d'étalonnage nouvellement amélioré se compose de lignes de texte. Chaque ligne contient une **valeur d'étalonnage spécifique** que les lutins doivent récupérer.
